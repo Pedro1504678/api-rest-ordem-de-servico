@@ -28,7 +28,7 @@ public class ClienteResource {
 
     @GetMapping
     public ResponseEntity<List<ClienteDTO>> findAll() {
-        
+
         List<ClienteDTO> listDTO = clienteService.findAll()
                 .stream().map(obj -> new ClienteDTO(obj)).collect(Collectors.toList());
 
